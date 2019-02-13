@@ -2,6 +2,10 @@ html{
   height: 100%;
 }
 
+body{
+  margin: 0;
+}
+
 .title {
   grid-area: header;
 }
@@ -24,6 +28,8 @@ html{
 .img-div img {
   display: flex;
   justify-content: center;
+  align-items: center;
+  align-content: center;
   width: 100%;
 }
 
@@ -48,8 +54,7 @@ html{
 
 #breguet-watches img {
   display: flex;
-  width: 103px;
-  height: 68px;
+  width: 31%;
 }
 
 #tribute-info {
@@ -80,26 +85,69 @@ html{
   align-self: center;
 }
 
+#tribute-info #referenceInfo a {
+text-decoration: none;
+color: black;
+font-style: italic;
+}
+
+
+.container{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 footer{
+  margin-left: 0px;
+  margin-right: opx;
   flex-shrink: 0;
   padding: 5px;
   background: green;
   font-size: 10px;
+  border: 0px;
+  margin: 0px;
+  text-align: center;
 }
 
-@media (min-width: 400px) {
+footer a{
+  color: black;
+  text-decoration: none;
+  text-decoration-color: black;
+}
+
+@media (min-width: 1000px) {
   .container {
     display: grid;
     grid-template-columns: 1fr 2fr 2fr;
     grid-template-rows: 150px 1fr 25px;
-    grid-template-areas: "header header header" "img paint text" "footer footer footer";
+    grid-template-areas: 
+    "header header header" 
+    "img paint text";
     grid-gap: 10px;
-    background: green;
   }
   #breguet-watches {
     flex-direction: column;
   }
   #breguet-watches img {
     width: 95%;
+    height: auto;
   }
+  
+  #tribute-info #mainInfo {
+   font-size: 1vmax;
+   font-weight: bold;
+  }
+  
+  #tribute-info #listInfo{
+    font-size: 1vmax;
+  }
+  
+  #tribute-info #referenceInfo {
+    font-size: 1vmax;
+  }
+
+  .img-div p {
+    font-size: 1vmax;
+  }
+
 }
